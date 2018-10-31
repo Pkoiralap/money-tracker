@@ -1,0 +1,18 @@
+.nav-bar {
+    background-color: white;
+    position: fixed;
+    color: black;
+    display: flex;
+    margin-right: 10px;
+    box-shadow: 1px 2px 3px 4px grey;
+    width: 99%;
+    height: 20px;
+}
+
+.nav-bar div {
+    margin-right: 50px;
+}
+
+.main-container {
+    padding-top: 21px;
+}
