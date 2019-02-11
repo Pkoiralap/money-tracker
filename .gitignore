@@ -1,2 +1,6 @@
 env/
 .idea/
+**.pyc
+.DS_Store
+.gitignore.swp
+db.sqlite3
