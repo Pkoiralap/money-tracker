@@ -1,0 +1,68 @@
+.navbar {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar .navbar-items {
+  float: left;
+}
+
+.navbar .navbar-items a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.navbar .navbar-items a:hover {
+  background-color: #111;
+}
+
+.main-content {
+    padding: 40px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+
+
+
+
+.form-container {
+    display: grid;
+    float: left;
+}
+.form-container label {
+    color: gray;
+    margin-bottom: 10px;
+}
+.form-container input {
+    width: 300px;
+    height: 30px;
+    margin-bottom: 20px;
+}
+.form-container select {
+    width: 300px;
+    height: 30px;
+    margin-bottom: 20px;
+}
+.form-container button {
+    width: 150px;
+    height: 40px;
+    background: ghostwhite;
+}

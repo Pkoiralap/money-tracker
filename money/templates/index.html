@@ -1,51 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    <h1> Home Page </h1>
-    <div>
-        People attending class:
-        <ul>
-            {% for person in allPeople %}
-                <li>
-                    {{ person.name }} - {{ person.occupation }}
-                </li>
-            {% endfor %}
-        </ul>
+{% extends 'base.html' %}
 
-        Facilitators:
-        <ul>
-            {% for person in allFacilitators %}
-                <li>
-                    {{ person.name }} - {{ person.occupation }}
-                </li>
-            {% endfor %}
-        </ul>
+{% block 'body' %}
+<div>
+    People attending class:
+    <ul>
+        {% for person in allPeople %}
+            <li>
+                {{ person.name }} - {{ person.occupation }}
+            </li>
+        {% endfor %}
+    </ul>
 
-        Transactions:
-        <table>
-            <thead>
-                <th> Type </th>
-                <th> Giving </th>
-                <th> Recieving </th>
-                <th> Date </th>
-                <th> Money </th>
-            </thead>
-            <tbody>
-                {% for trans in transactions %}
-                    <tr>
-                        <td> {{ trans.type }} </td>
-                        <td> {{ trans.giving_party }} </td>
-                        <td> {{ trans.receiving_party }} </td>
-                        <td> {{ trans.date }} </td>
-                        <td> {{ trans.money }} </td>
-                    </tr>
-                {% endfor%}
-            </tbody>
-        </table>
-    </div>
-</body>
-</html>
+    Facilitators:
+    <ul>
+        {% for person in allFacilitators %}
+            <li>
+                {{ person.name }} - {{ person.occupation }}
+            </li>
+        {% endfor %}
+    </ul>
+
+
+</div>
+{% endblock %}

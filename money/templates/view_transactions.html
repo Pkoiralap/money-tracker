@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block 'body' %}
+<div>
+Transactions:
+    <table>
+        <thead>
+            <th> Type </th>
+            <th> Giving </th>
+            <th> Recieving </th>
+            <th> Date </th>
+            <th> Money </th>
+            <th> Action </th>
+
+        </thead>
+        <tbody>
+            {% for trans in transactions %}
+                <tr>
+                    <td> {{ trans.type }} </td>
+                    <td> {{ trans.giving_party }} </td>
+                    <td> {{ trans.receiving_party }} </td>
+                    <td> {{ trans.date }} </td>
+                    <td> {{ trans.money }} </td>
+                    <td>
+                        <form method="post" action="/money/removetransactions/">
+                            {% csrf_token %}
+                            <input name="primary_key" value="{{ trans.pk }}" style="display:none">
+                            <button type="submit">
+                                Remove
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor%}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

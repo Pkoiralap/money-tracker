@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "css/index.css" %}">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-items">
+            <a href="/money/index"> Home </a>
+        </div>
+        <div class="navbar-items">
+            <a href="/money/addtransaction"> Add Transactions </a>
+        </div>
+        <div class="navbar-items">
+            <a href="/money/transactions"> View Transactions </a>
+        </div>
+    </div>
+    <div class="main-content">
+        {% block 'body' %}
+        {% endblock %}
+    </div>
+</body>
+</html>
