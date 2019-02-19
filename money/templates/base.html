@@ -7,7 +7,8 @@
     <link rel="stylesheet" type="text/css" href="{% static "css/index.css" %}">
 </head>
 <body>
-    <div class="navbar">
+    {% if user.is_authenticated %}
+        <div class="navbar">
         <div class="navbar-items">
             <a href="/money/index"> Home </a>
         </div>
@@ -17,10 +18,22 @@
         <div class="navbar-items">
             <a href="/money/transactions"> View Transactions </a>
         </div>
+        <div class="navbar-items" style="position:absolute; margin-top: 10px; right: 30px">
+            <form action="/accounts/logout">
+                <button type="submit"> Logout </button>
+            </form>
+        </div>
+
     </div>
     <div class="main-content">
         {% block 'body' %}
         {% endblock %}
     </div>
+    {% else %}
+        <div> You are not logged in</div>
+        <form action="/accounts/login">
+            <button type="submit"> Login </button>
+        </form>
+    {% endif%}
 </body>
 </html>

@@ -29,6 +29,13 @@ Transactions:
                                 Remove
                             </button>
                         </form>
+                        <form method="post" action="/money/updatetransaction/">
+                            {% csrf_token %}
+                            <input name="primary_key" value="{{ trans.pk }}" style="display:none">
+                            <button type="submit">
+                                Remove
+                            </button>
+                        </form>
                     </td>
                 </tr>
             {% endfor%}

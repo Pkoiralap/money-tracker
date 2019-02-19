@@ -1,7 +1,5 @@
 from django.db import models
 
-# Create your models here.
-
 class Transaction(models.Model):
     type = models.CharField(max_length=20, choices=[('income', 'Income'), ('expenditure', 'Expenditure')])
     money = models.FloatField(max_length=20)
